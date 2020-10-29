@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: hystrix-dashboard
+
+server:
+  port: 4001
+
+#配置运行监控的主机地址
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: localhost

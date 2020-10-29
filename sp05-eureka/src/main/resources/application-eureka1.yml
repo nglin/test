@@ -1,0 +1,14 @@
+#application-eureka1.yml
+#激活当前profile:--spring.profile.active=eureka1
+
+eureka:
+  server:
+    enable-self-preservation: false #关闭保护模式
+  instance:
+    hostname: eureka1 #集群服务器间用主机名区分
+  client:
+    #单台服务器，不向自己注册，不从自己拉取
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: htt://eureka2:2002/eureka

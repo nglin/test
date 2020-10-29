@@ -1,0 +1,15 @@
+#向注册中心注册的服务名
+spring:
+  application:
+    name: item-service
+
+server:
+  port: 8001
+
+#eureka连接地址
+#defaultZone默认地点
+#其他地点配置，需要由云服务来提供
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
